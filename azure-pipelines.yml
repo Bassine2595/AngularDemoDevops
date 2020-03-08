@@ -9,7 +9,7 @@
     containerregistrytype: 'Container Registry'
     dockerRegistryEndpoint: 'dockertestreg'
     dockerComposeFile: '**/Dockerfile'
-    projectName: 'bassine/angulardemodevops:$(Build)'
+    projectName: $(Build.'bassine/angulardemodevops)'
     action: 'Push services'
     action: 'Run services'
 
@@ -38,5 +38,5 @@ steps:
   inputs:
     containerregistrytype: 'Container Registry'
     dockerComposeFile: '**/Dockerfile'
-    projectName: 'bassine/angulardemodevops:$(Build)'
+    projectName: ' $(Build.'bassine/angulardemodevops)'
     action: 'Build services'
