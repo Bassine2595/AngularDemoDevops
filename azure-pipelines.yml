@@ -12,7 +12,7 @@
     projectName: 'bassine/angulardemodevops:$(Build)'
     action: 'Push services'
     action: 'Run services'
-- task: Docker@2
+
   inputs:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
@@ -38,5 +38,5 @@ steps:
   inputs:
     containerregistrytype: 'Container Registry'
     dockerComposeFile: '**/Dockerfile'
-    projectName: 'bassine/angulardemodevops:$(Build.Repository.Name)'
+    projectName: 'bassine/angulardemodevops:$(Build)'
     action: 'Build services'
