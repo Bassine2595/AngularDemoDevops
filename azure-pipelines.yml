@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'dockertest'
+    dockerComposeFile: '**/Dockerfile'
+    projectName: '- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'dockertestreg'
+    dockerComposeFile: '**/Dockerfile'
+    projectName: 'bassine/angulardemodevops:$(Build)'
+    action: 'Push services'
+    action: 'Run services'
 - task: Docker@2
   inputs:
     command: 'buildAndPush'
