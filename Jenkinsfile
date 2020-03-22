@@ -9,7 +9,7 @@ node {
     {
        
 
-         sh  'docker run --rm -d  -p 81:80/tcp angulardemodevops:latest'
+         sh  'docker run --rm -d  -p 82:80/tcp angulardemodevops:latest'
        
            
 
