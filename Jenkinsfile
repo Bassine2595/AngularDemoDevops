@@ -9,7 +9,7 @@ node {
     {
         docker.image('bassine/angulardemodevops').withRun('-p 3000'){ c->
        
-         sh 'docker run'
+           
 
         }
     }
