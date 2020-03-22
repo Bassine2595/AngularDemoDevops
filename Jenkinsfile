@@ -7,7 +7,7 @@ node {
     }
     stage('Test')
     {
-        docker.image('bassine/angulardemodevops').withRun('-p 80:81'){ c->
+        docker.image('bassine/angulardemodevops').withRun('-p 3000'){ c->
          sh 'docker ps'
          sh 'docker run'
 
