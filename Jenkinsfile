@@ -9,7 +9,7 @@ node {
     {
        
 
-         sh  'docker build -t "appAng/Dockerfile" -t'
+         sh  'docker build -t  appAng/Dockerfile '
        
            
 
