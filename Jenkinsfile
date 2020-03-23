@@ -9,11 +9,12 @@ node {
     {
        
 
-         sh  'docker build -t  bassine/angulardemodevops:latest '
+         sh  'docker build -t  bassine/angulardemodevops:latest appAng'
        
            
 
     }
+
     stage('PUSH')
     {
         sh 'docker login -u bassine -p'
