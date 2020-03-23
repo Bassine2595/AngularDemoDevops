@@ -9,9 +9,16 @@ node {
     {
        
 
-         sh  'docker run --rm -d  -p 83:80/tcp angulardemodevops:latest'
+         sh  'docker build --rm -f "appAng/Dockerfile" -t angulardemodevops:latest "appAng"'
        
            
 
     }
+    stage('PUSH')
+    {
+        sh 'docker login -u bassine -p'
+        sh 'docker push bassine/angulardemodevops:latest'
+
+    }
 }
+    
