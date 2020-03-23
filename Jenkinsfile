@@ -3,13 +3,13 @@ node {
     stage('Clone')
     {
         checkout : scm
-
+//angulardemodevops:latest
     }
     stage('BUILD')
     {
        
 
-         sh  'docker build -t "appAng/Dockerfile" -t angulardemodevops:latest '
+         sh  'docker build -t "appAng/Dockerfile" -t'
        
            
 
