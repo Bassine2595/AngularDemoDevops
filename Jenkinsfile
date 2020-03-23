@@ -9,7 +9,7 @@ node {
     {
        
 
-         sh  'docker build -t  angulardemodevops:latest '
+         sh  'docker build -t  bassine/angulardemodevops:latest '
        
            
 
