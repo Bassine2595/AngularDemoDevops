@@ -9,7 +9,7 @@ node {
     {
        
 
-         sh  'docker build -t  appAng/Dockerfile '
+         sh  'docker build -t  angulardemodevops:latest '
        
            
 
