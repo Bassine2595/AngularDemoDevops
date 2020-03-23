@@ -3,7 +3,7 @@ node {
 
     environnement { 
     registry = "bassine/angulardemodevops" 
-    RegistryCredential = 'dockerhub' 
+    RegistryCredential = 'Dockerhub' 
   } 
     stage('Clone')
     {
