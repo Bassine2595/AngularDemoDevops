@@ -1,17 +1,30 @@
-pipeline { 
-  environnement { 
+node {
+    def app
+
+    environnement { 
     registry = "bassine/angulardemodevops" 
     RegistryCredential = 'dockerhub' 
   } 
-  agent toutes les 
-  étapes { 
-    stage ('Image de construction') { 
-      étapes { 
-        script { 
-          docker.build registre + ": $ BUILD_NUMBER" 
-        } 
-      } 
-    } 
-  } 
-}}
+    stage('Clone')
+    {
+        checkout : scm
+//angulardemodevops:latest
+    }
+    stage('BUILD')
+    {
+       
+
+         sh  'docker.build registre + ": $ BUILD_NUMBER" '
+       
+           
+
+    }
+
+    stage('PUSH')
+    {
+        sh 'docker login -u bassine -p'
+        sh 'docker push bassine/angulardemodevops:latest'
+
+    }
+}
     
